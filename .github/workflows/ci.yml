@@ -1,11 +1,14 @@
-name: Build Vite App
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: ["main"]
-  pull_request:
-    branches: ["main"]
   workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build:
@@ -15,27 +18,33 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      # INSTALAR PNPM PRIMEIRO
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      # DEPOIS setup Node com cache do pnpm
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18
           cache: 'pnpm'
 
-      # INSTALAR PNPM (isso precisa vir ANTES de rodar qualquer comando)
-      - name: Install pnpm
-        uses: pnpm/action-setup@v3
-        with:
-          version: 8
-
-      # Agora o ambiente tem pnpm instalado
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
       - name: Build project
         run: pnpm run build
 
-      - name: Upload build artifacts
-        uses: actions/upload-artifact@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: vite-dist
-          path: dist
+          path: './dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
