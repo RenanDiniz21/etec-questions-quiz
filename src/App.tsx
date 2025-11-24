@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import type { Question, QuestionBlock } from "./types";
+import questionsData from "./data/questions.json";
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -31,8 +32,22 @@ function generateExplanation(q: Question): string {
 }
 
 export default function App() {
-  const [data, setData] = useState<Question[]>([]);
-  const [loading, setLoading] = useState(true);
+  // Processa os dados direto do import (síncrono)
+  const data = useMemo(() => {
+    const flat: Question[] = [];
+
+    for (const block of questionsData as QuestionBlock[]) {
+      for (const q of block.questions) {
+        flat.push({
+          ...q,
+          __subject: block.subject,
+          __sourceText: block.text,
+        });
+      }
+    }
+
+    return flat;
+  }, []);
 
   const [subjectFilter, setSubjectFilter] = useState("Todas");
   const [questionPool, setQuestionPool] = useState<Question[]>([]);
@@ -41,33 +56,6 @@ export default function App() {
   const [answers, setAnswers] = useState<Record<string, number | undefined>>({});
   const [showAnswers, setShowAnswers] = useState<Record<string, boolean>>({});
   const [score, setScore] = useState(0);
-
-  useEffect(() => {
-    async function load() {
-      try {
-        const res = await fetch("/questions.json");
-        const json: QuestionBlock[] = await res.json();
-
-        const flat: Question[] = [];
-
-        for (const block of json) {
-          for (const q of block.questions) {
-            flat.push({
-              ...q,
-              __subject: block.subject,
-              __sourceText: block.text,
-            });
-          }
-        }
-
-        setData(flat);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    load();
-  }, []);
 
   const subjects = useMemo(() => {
     const s = Array.from(new Set(data.map((q) => q.__subject)));
@@ -130,8 +118,6 @@ export default function App() {
     setScore(0);
   }
 
-  if (loading) return <div className="loading">Carregando...</div>;
-
   return (
     <div className="container">
       <header className="header">
@@ -164,9 +150,9 @@ export default function App() {
           <div className="question-card" key={q.id}>
             <div className="subject">{q.__subject}</div>
 
-            <div className="source-text">
-              {q.__sourceText}
-            </div>
+            {q.__sourceText && (
+              <div className="source-text">{q.__sourceText}</div>
+            )}
 
             <div className="question">
               {i + 1}. {q.question}
