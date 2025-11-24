@@ -1,0 +1,278 @@
+[
+  {
+    "text": "Compreender a constituição e o desenvolvimento do corpo humano e de seus sistemas, entender seus mecanismos fisiológicos e conhecer a relação de interdependência existente entre os seus órgãos são habilidades importantes para o desenvolvimento de atitudes, de hábitos individuais e coletivos saudáveis, como, por exemplo, cuidar da nutrição, da higiene, da prática de atividade física e da prevenção de doenças. Quando uma pessoa está saudável, física e psicologicamente, tem maior disposição para buscar o equilíbrio em outros aspectos e ter uma vida estável.",
+    "subject": "Biologia",
+    "questions": [
+      {
+        "id": "bio-001",
+        "question": "Para alcançar o ideal descrito no texto, deve-se:",
+        "options": [
+          "evitar o hábito de fazer refeições balanceadas, pois, a partir da diversidade de substâncias ingeridas, o corpo fica com baixa imunidade e mais suscetível às doenças.",
+          "realizar a prática regular de atividades físicas, pois elas auxiliam no controle da hipertensão arterial, amenizam o risco de desenvolver diabetes, melhoram a flexibilidade e previnem a osteopenia.",
+          "realizar acompanhamento médico periódico, por meio de determinados tipos de exames, pois impede o aparecimento de doenças graves nos órgãos como o câncer, o infarto do miocárdio e o mal de Chagas.",
+          "ingerir quantidade reduzida de água, pois garante a remoção de toxinas e impurezas do corpo, especialmente as que se acumulam nos rins e podem formar os cálculos renais.",
+          "utilizar, antes de dormir, dispositivos eletrônicos, pois a luz desses equipamentos prioriza o relaxamento, promovendo o sono tranquilo e restaurador do corpo."
+        ],
+        "answer": "realizar a prática regular de atividades físicas, pois elas auxiliam no controle da hipertensão arterial, amenizam o risco de desenvolver diabetes, melhoram a flexibilidade e previnem a osteopenia."
+      }
+    ]
+  },
+  {
+    "text": "A tabela periódica é composta por 118 elementos químicos, mas isso não significa que todos eles estão presentes no corpo humano e que esta presença seja de forma igualitária. Na verdade, cinco deles correspondem à maior parte da composição de nosso organismo. São eles: oxigênio, carbono, hidrogênio, nitrogênio e cálcio. Outros são igualmente fundamentais para que o organismo funcione de forma adequada. Esse é o caso do sódio, que, embora represente apenas cerca de 0,2 % da massa corporal, é um mineral muito importante e ajuda a equilibrar os fluidos do corpo.",
+    "subject": "Química",
+    "questions": [
+      {
+        "id": "qui-001",
+        "question": "Dos elementos citados no texto, o único que se encontra encaixado na tabela periódica representada na imagem é o:",
+        "options": [
+          "oxigênio",
+          "carbono",
+          "hidrogênio",
+          "nitrogênio",
+          "cálcio"
+        ],
+        "answer": "carbono"
+      },
+      {
+        "id": "qui-002",
+        "question": "O elemento que contribui para o equilíbrio dos fluidos corpóreos, mencionado no texto, é ingerido por meio da nossa alimentação. Esse elemento é um dos constituintes principais:",
+        "options": [
+          "do leite",
+          "da carne",
+          "do açúcar",
+          "da pimenta",
+          "do sal de cozinha"
+        ],
+        "answer": "do sal de cozinha"
+      }
+    ]
+  },
+  {
+    "text": "Os lipídios são moléculas orgânicas como os óleos e as gorduras. São encontrados em alimentos como as carnes vermelhas, a gema de ovo, as oleaginosas, os óleos vegetais, entre outros. Os lipídios não são solúveis em água, mas se dissolvem em solventes orgânicos. Quando ingeridos, os lipídios passam pelo processo de emulsificação no interior do duodeno, primeira parte do intestino delgado, por meio da ação dos ácidos biliares. Posteriormente, são digeridos por enzimas no trato gastrointestinal, sendo os produtos dessa digestão, finalmente, absorvidos pelas células da mucosa intestinal.",
+    "subject": "Biologia",
+    "questions": [
+      {
+        "id": "bio-002",
+        "question": "Sobre esse processo de emulsificação, é correto afirmar que:",
+        "options": [
+          "consiste em hidrolisar os lipídios, produzindo aminoácidos e água.",
+          "impede que os lipídios sejam absorvidos, facilitando a sua eliminação no bolo fecal.",
+          "estimula o trânsito intestinal dos lipídios, permitindo sua distribuição pelas células do corpo.",
+          "ocorre na cavidade bucal pela ação da enzima amilase salivar, produzindo glicerol e ácidos graxos.",
+          "age como detergente, aumentando a superfície de contato e facilitando a atuação das enzimas lipases."
+        ],
+        "answer": "age como detergente, aumentando a superfície de contato e facilitando a atuação das enzimas lipases."
+      }
+    ]
+  },
+  {
+    "text": "Manter um cérebro com bilhões de neurônios custa caro. Embora esse órgão responda por apenas 2% da massa de um indivíduo, ele consome um quinto de toda a energia ingerida. Outros primatas com um número elevado de neurônios também enfrentam desafios parecidos. É o caso do gorila, um animal que pode pesar até 200 quilogramas e tem um cérebro com 33 bilhões de neurônios. Como esses primatas se alimentam basicamente de folhas, eles precisam ingerir nada menos que 18 quilogramas de comida por dia. Não é de se espantar que passem diariamente cerca de oito horas comendo, conforme o registro de primatólogos. As simulações mostraram que, caso mantivesse a dieta crua dos outros primatas, tanto o Homo erectus, surgido há cerca de 1,8 milhão de anos, quanto os humanos modernos, que têm 200 mil anos, precisariam passar improváveis nove horas ou mais por dia se alimentando. O fato de conseguirmos sustentar nosso cérebro sem precisar passar o dia inteiro comendo é sinal de que alguma coisa mudou. Muitos cientistas afirmam que a adoção de uma dieta baseada em proteína animal resultou, ao longo do tempo, na criação de diversas habilidades para conseguir esse tipo de alimento. A proteína animal foi essencial para fornecer mais calorias, com menos esforço, o que favoreceu o crescimento do cérebro. Além disso, cozinhar é uma forma de começar a digerir um alimento antes mesmo que ele seja levado à boca. O calor rompe a estrutura tridimensional das moléculas da comida, por isso pesquisadores defendem que a quantidade de energia que absorvemos de um alimento aumenta quando cozido. Estudos apontam que, além de tornar a digestão mais fácil e aumentar a absorção de energia dos alimentos, a dieta cozida permitiu diminuir muito o tempo gasto com a alimentação.",
+    "subject": "Biologia",
+    "questions": [
+      {
+        "id": "bio-003",
+        "question": "É correto afirmar que o trecho 'alguma coisa mudou', presente no texto, relaciona-se:",
+        "options": [
+          "à manutenção dos mecanismos de absorção de energia que excluíam a ingestão de proteína animal.",
+          "à alimentação contínua e demorada de primatas, como gorilas e humanos, que consomem frutas.",
+          "à estrutura tridimensional das moléculas dos cérebros de primatólogos.",
+          "ao modo de preparo e ao tipo de alimento que passou a ser consumido pelos humanos.",
+          "às tarefas realizadas por todos os humanos que consomem flores e frutas para garantir energia para o cérebro."
+        ],
+        "answer": "ao modo de preparo e ao tipo de alimento que passou a ser consumido pelos humanos."
+      },
+      {
+        "id": "bio-004",
+        "question": "Segundo o texto, é correto afirmar que:",
+        "options": [
+          "os primatas gastam menos tempo e energia com alimentação ao consumirem produtos in natura.",
+          "o cozimento de alimentos acarreta um gasto energético cerebral maior pela dificuldade na concretização dessa ação.",
+          "o cérebro humano, para obter a energia necessária, utiliza 20 % das calorias ingeridas diariamente por um indivíduo.",
+          "a manutenção de uma dieta restrita a alimentos crus facilitou a digestão dos humanos e ampliou a absorção de energia dos alimentos.",
+          "o tempo dedicado ao preparo dos alimentos aumentou o número de neurônios do cérebro humano, tornando a demanda por energia ainda maior."
+        ],
+        "answer": "o cérebro humano, para obter a energia necessária, utiliza 20 % das calorias ingeridas diariamente por um indivíduo."
+      },
+      {
+        "id": "bio-005",
+        "question": "A partir do texto, é correto afirmar que:",
+        "options": [
+          "a biologia humana se desenvolveu de forma independente do modo de vida dos homens pré-históricos.",
+          "o consumo de proteínas de origem animal teve impacto diminuto na formação do cérebro humano como o conhecemos hoje.",
+          "a ingestão de carne fornece proteínas e calorias e, por isso, é prejudicial para a formação e para a saúde do corpo humano.",
+          "a inclusão de carne nos hábitos alimentares contribuiu para a evolução do corpo humano e para o surgimento de diferentes habilidades.",
+          "a afirmação de que a proteína animal favoreceu o crescimento do cérebro é considerada controversa pelos cientistas."
+        ],
+        "answer": "a inclusão de carne nos hábitos alimentares contribuiu para a evolução do corpo humano e para o surgimento de diferentes habilidades."
+      },
+      {
+        "id": "bio-006",
+        "question": "Na frase 'Como se alimentam basicamente de folhas, eles precisam ingerir nada menos que 18 quilogramas de comida por dia.':",
+        "options": [
+          "a conjunção 'como' inicia a oração subordinada que expressa ideia de causa.",
+          "o pronome 'se' foi empregado para indeterminar o sujeito da oração.",
+          "o advérbio 'basicamente' expressa ideia de inapropriado e intensifica a ação de os animais alimentarem-se de folhas.",
+          "a preposição 'de', em 'de comida', tem a função de conectar dois substantivos e expressa ideia de exclusão.",
+          "o verbo 'precisar', na expressão 'precisam ingerir', indica ação eventual, esporádica."
+        ],
+        "answer": "a conjunção 'como' inicia a oração subordinada que expressa ideia de causa."
+      }
+    ]
+  },
+  {
+    "text": "Você sabia que o oceano desempenha um papel fundamental na regulação do clima no planeta? Vivemos em um planeta azul, com oceanos e mares cobrindo mais de 70% da superfície da Terra. Os oceanos nos alimentam, regulam nosso clima e geram a maior parte do oxigênio que respiramos. Apesar de sua importância, os oceanos estão enfrentando ameaças sem precedentes como resultado da atividade humana. Todos os anos, cerca de 8 milhões de toneladas de resíduo plástico acabam nos ecossistemas marinhos. Ao mesmo tempo, a crise climática está danificando os recifes de coral e outros ecossistemas importantes, a pesca excessiva ameaça a estabilidade dos estoques de peixes, a poluição por nutrientes contribui para a criação de zonas mortas, e quase 80% das águas residuais do mundo são descartadas sem tratamento nos oceanos. Cuidar dos oceanos é cuidar do clima e da vida.",
+    "subject": "Português",
+    "questions": [
+      {
+        "id": "port-001",
+        "question": "Os pronomes são importantes elementos textuais, pois auxiliam na construção de sentido do texto, evitando a repetição de informações. Os pronomes destacados no texto se referem, respectivamente, a:",
+        "options": [
+          "leitor; leitores e autor; oxigênio; e oceanos.",
+          "oceano; autores; oxigênio; e ameaças.",
+          "leitor; humanidade; clima; e Terra.",
+          "leitores e autor; leitor; parte; e importância.",
+          "autor e leitores; humanidade; parte do oxigênio; e ameaças."
+        ],
+        "answer": "autor e leitores; humanidade; parte do oxigênio; e ameaças."
+      },
+      {
+        "id": "port-002",
+        "question": "Para alcançar o objetivo comunicativo de um texto, várias estratégias são utilizadas. Assinale a alternativa que apresenta uma análise correta sobre o texto lido:",
+        "options": [
+          "O uso recorrente do presente do indicativo evidencia que as ações realizadas são atemporais, ou seja, verdadeiras e imutáveis independentemente do momento em que estamos.",
+          "O texto, embora informativo, traz frases longas e linguagem difícil que o tornam inacessível a um público leigo, já que é destinado a pesquisadores acadêmicos.",
+          "Perguntas dirigidas ao leitor e linguagem coloquial são utilizadas a fim de conquistar atenção para as informações desenvolvidas e despertar o pensamento reflexivo.",
+          "A narração predomina no texto, e o narrador procura facilitar a construção das imagens relacionadas às ações dos oceanos expostas por ele.",
+          "A hashtag (#), utilizada pelo autor, fere a gramática normativa adequada ao gênero desenvolvido, pois o texto deve circular em canais de comunicação formais como revistas científicas."
+        ],
+        "answer": "Perguntas dirigidas ao leitor e linguagem coloquial são utilizadas a fim de conquistar atenção para as informações desenvolvidas e despertar o pensamento reflexivo."
+      }
+    ]
+  },
+  {
+    "text": "A história da cultura caipira nasceu do encontro entre os bandeirantes portugueses e os indígenas, e está intimamente ligada ao bandeirismo paulista. 'Esses bandeirantes eram meio indígenas, meio portugueses', avalia o professor Ivan Vilela Pinto, da Escola de Comunicações e Artes (ECA) da USP. Andavam descalços e teciam suas próprias roupas, imagem que está longe 'daquela romantizada, de um homem de botas com roupas imensas'. É nesse contexto que surge também a viola caipira. Trazida para o Brasil pelo colonialismo português, a viola, em Portugal, era um instrumento das classes mais pobres da população e 'dificilmente chegou à corte ou andou em casas senhoriais'. E, no solo brasileiro, não foi diferente. Inicialmente, seu uso foi associado aos negros escravizados e, mais tarde, tornou-se 'um instrumento que tem ligação com essa crônica que, de certa forma, é a gênese da música popular'. Para o professor, essa é uma cultura que possui linguagem própria no dialeto, além de uma música 'muito autêntica', pois afirma não existir nenhum segmento da música popular brasileira com tantos ritmos distintos convivendo. 'Se, por um lado, a música caipira é muito simples sob o aspecto técnico, do ponto de vista rítmico é muito sofisticada.' Mas, durante a era da industrialização, a cultura caipira foi depreciada junto com o caipira paulista, visto como uma figura que estava em contradição com o ideário de modernização das cidades. Segundo Vilela, nessa época, o caipira 'representa a oposição a isso tudo; mas, de forma muito ampla, acaba sendo uma âncora de representação identitária até da elite paulista' já que, 'no fundo, São Paulo estava procurando uma identidade própria diante de todo o Brasil e viu no caipira uma maneira forte de representar isso'.",
+    "subject": "História e Português",
+    "questions": [
+      {
+        "id": "hist-001",
+        "question": "De acordo com o texto, é correto afirmar que:",
+        "options": [
+          "os bandeirantes, que exploraram o interior de São Paulo, impuseram a vestimenta e o estilo musical europeus aos povos nativos.",
+          "a viola caipira foi trazida pelos portugueses ao Brasil durante a Revolução Industrial, período de formação da cidade de São Paulo.",
+          "o conceito de cultura caipira é anterior à Colonização, uma vez que se origina nos hábitos dos povos indígenas.",
+          "o caipira, cuja cultura fora menosprezada por ser tachada como atrasada, tornou-se símbolo da identidade paulista.",
+          "a técnica e o ritmo da música caipira são simples por serem resultado da junção das culturas indígena, africana e portuguesa."
+        ],
+        "answer": "o caipira, cuja cultura fora menosprezada por ser tachada como atrasada, tornou-se símbolo da identidade paulista."
+      },
+      {
+        "id": "hist-002",
+        "question": "O termo 'crônica', no texto, refere-se:",
+        "options": [
+          "ao período de longa duração da viola caipira antes de seu desaparecimento.",
+          "à biografia dos reis portugueses responsáveis pela educação musical popular.",
+          "ao texto jornalístico desenvolvido para comentar o conflito entre indígenas e portugueses.",
+          "à brevidade do próprio texto, cuja concisão se deve à origem popular do tema.",
+          "aos elementos históricos ligados à incorporação da viola em nossa cultura."
+        ],
+        "answer": "aos elementos históricos ligados à incorporação da viola em nossa cultura."
+      }
+    ]
+  },
+  {
+    "text": "Há dez mil anos, o trigo era apenas uma gramínea silvestre, confinada a uma pequena região do Oriente Médio. Em apenas alguns milênios, estava crescendo no mundo inteiro. Em áreas como as Grandes Planícies da América do Norte, onde não crescia um único pé de trigo há 10 mil anos, hoje podemos caminhar por centenas de quilômetros sem encontrar nenhuma outra planta. Atualmente, o trigo cobre 2,25 milhões de quilômetros quadrados da superfície do globo, quase 10 vezes o tamanho da Grã-Bretanha. O trigo não gostava de rochas e pedregulhos, nem de dividir espaço, água e nutrientes com outras plantas, por isso os seres humanos tiveram que dedicar cada vez mais esforços para seu cultivo.",
+    "subject": "Geografia",
+    "questions": [
+      {
+        "id": "geo-001",
+        "question": "Sobre o cereal mencionado no texto, é correto afirmar que é:",
+        "options": [
+          "o principal produto agrícola plantado na região Centro-Oeste do Brasil.",
+          "na Grã-Bretanha onde se encontra a maior área plantada do planeta.",
+          "o principal produto de exportação dos países do Oriente Médio.",
+          "plantado em larga escala nos Estados Unidos e no Canadá.",
+          "cultivado nos desertos rochosos da Europa e da África."
+        ],
+        "answer": "plantado em larga escala nos Estados Unidos e no Canadá."
+      }
+    ]
+  },
+  {
+    "text": "A sigla PANCs significa Plantas Alimentícias Não Convencionais, ou seja, espécies já conhecidas, mas que não são popularmente consumidas. Acredita-se que o Brasil tenha, aproximadamente, 10 mil espécies de plantas com potencial de uso alimentar. Elas são uma excelente alternativa de alimentação sustentável, já que atendem à demanda por nutrientes que suprem as necessidades humanas. No entanto, os estudos e os cultivos dessas espécies ainda não são amplamente desenvolvidas. Infelizmente, essas plantas ainda não são produzidas em larga escala. Isso poderia ajudar a combater a fome, por exemplo. O que se sabe é que essas espécies são rústicas, propagadas por mudas ou sementes e resistentes a doenças e pragas. Além disso, as PANCs, geralmente hortaliças, têm como característica a boa adaptação climática e a grande eficiência na absorção de nutrientes. Atualmente, PANCs são cultivadas por pequenas comunidades agrícolas brasileiras, muitas vezes para consumo próprio.",
+    "subject": "Biologia",
+    "questions": [
+      {
+        "id": "bio-007",
+        "question": "De acordo com o texto, é correto afirmar que:",
+        "options": [
+          "as PANCs não permitem uma alimentação adequada ao ser humano.",
+          "a utilização das PANCs tem potencial para minimizar o problema da fome.",
+          "a pouca resistência às pragas é um empecilho ao cultivo das PANCs.",
+          "as PANCs não suportam as condições climáticas brasileiras.",
+          "a grande produção de PANCs torna o Brasil exportador desse alimento."
+        ],
+        "answer": "a utilização das PANCs tem potencial para minimizar o problema da fome."
+      }
+    ]
+  },
+  {
+    "text": "Você sabe qual a diferença entre Amazônia Internacional, Bacia Amazônica, Bioma Amazônia, Região Norte do Brasil e Amazônia Legal? A Amazônia Internacional inclui todos os países que compartilham o Bioma Amazônia, inclusive o Brasil. A Bacia Amazônica é a maior bacia hidrográfica do mundo. Seu principal rio, o Amazonas, corta a região para desaguar no Oceano Atlântico, lançando ao mar milhões de litros d'água a cada segundo. O Bioma Amazônia é um dos ecossistemas mais importantes e diversificados do mundo. Ele é conhecido por sua floresta tropical densa, por seus rios extensos e seus animais. Entre suas características, inclui-se uma grande variedade de espécies de plantas e animais, muitas das quais não são encontradas em nenhum outro lugar do mundo. A Floresta Amazônica abriga mais de 40 000 espécies de plantas, cerca de 2 000 espécies de aves, 300 espécies de mamíferos e 2 500 espécies de peixes. Além disso, possui um clima quente e úmido, e a precipitação é abundante. Outro traço distintivo importante deste Bioma, é a abundância de rios, sendo o Rio Amazonas o mais conhecido e o maior em volume de água do mundo. Ele é responsável por cerca de um quinto de toda a água doce do planeta. A Região Norte do Brasil é uma das cinco grandes regiões brasileiras definidas pelo Instituto Brasileiro de Geografia e Estatística (IBGE) e é composta por sete estados. A Amazônia Legal corresponde à área de atuação da Superintendência de Desenvolvimento da Amazônia (Sudam), estabelecida por lei, e tem, como um de seus objetivos, conservar o patrimônio natural, que inclui elementos ecológicos, históricos, geológicos e socioculturais. Essa área engloba a totalidade de oito estados (Acre, Amapá, Amazonas, Mato Grosso, Pará, Rondônia, Roraima e Tocantins) e parte do Estado do Maranhão. A Amazônia Legal se estende além do Bioma Amazônia, englobando também parte do cerrado e do pantanal.",
+    "subject": "Geografia",
+    "questions": [
+      {
+        "id": "geo-002",
+        "question": "Com base no texto, é correto afirmar que:",
+        "options": [
+          "a Amazônia Internacional é administrada pelo Instituto Brasileiro de Geografia e Estatística (IBGE).",
+          "os estados da Região Norte do Brasil estão totalmente inseridos na Amazônia Legal.",
+          "o estado do Maranhão, por pertencer à Região Norte, faz parte da Amazônia Legal.",
+          "a bacia hidrográfica do Amazonas engloba todos os rios da América do Sul.",
+          "o Bioma Amazônia se estende da Venezuela até o sul da Argentina."
+        ],
+        "answer": "o estado do Maranhão, por pertencer à Região Norte, faz parte da Amazônia Legal."
+      },
+      {
+        "id": "geo-003",
+        "question": "A Amazônia Legal:",
+        "options": [
+          "abrange todos os estados da Região Centro-Oeste do Brasil.",
+          "localiza-se totalmente no hemisfério sul da Terra.",
+          "engloba a maior parte do Bioma Amazônia.",
+          "inclui todas as reservas indígenas existentes no Brasil.",
+          "avança sobre o polígono das secas, no Nordeste brasileiro."
+        ],
+        "answer": "engloba a maior parte do Bioma Amazônia."
+      }
+    ]
+  },
+  {
+    "text": "Maior floresta tropical da Terra a toda hora sofre um duro golpe. Contra trator, corrente, motosserra, a bela flora clama em vão: 'Me poupe!' Porém tem uma gente surda e cega para a beleza e o valor da mata, embora o mundo grite que já chega, pois é a vida que o desmate mata. Mais vasta ainda todavia é a devastação e o trauma: focos de fogo nos sufocam fauna, flora e até a alma. Amazônia! Razão de tanta insânia e tanta insônia! Objeto de omissão e ação errônea! É sem igual, sem plano B nem clone a Amazônia! Dos povos da floresta sob pressão, o indígena, seu grande guardião, em comunhão com ela há milênios, nos últimos e trágicos decênios, vem vendo a mata sendo ameaçada e cada terra deles atacada por levas de peões de poderosos com planos de riqueza horrorosos. É invasão!, destruição!, ódio a quem são seus empecilhos! Eles não pensam no amanhã nem do planeta nem dos próprios filhos!",
+    "subject": "Português e Literatura",
+    "questions": [
+      {
+        "id": "lit-001",
+        "question": "Segundo a letra da canção:",
+        "options": [
+          "a falta de mobilização dos povos originários para proteger os biomas mencionados resulta do curto período de convivência com a floresta.",
+          "a destruição da Floresta Amazônica gera prejuízos à vida animal e à vegetal, amenizando os impactos na vida e na cultura daqueles que a habitam.",
+          "os povos originários aliaram-se recentemente aos guardiões da floresta, quando houve um recrudescimento trágico do desmatamento.",
+          "a Amazônia é alvo de exploração pelo caráter único de suas riquezas, ação facilitada pela ausência de medidas efetivas de proteção.",
+          "os ataques à Floresta Amazônica, além de esporádicos, acarretam consequências reversíveis e restritas à fauna local."
+        ],
+        "answer": "a Amazônia é alvo de exploração pelo caráter único de suas riquezas, ação facilitada pela ausência de medidas efetivas de proteção."
+      },
+      {
+        "id": "lit-002",
+        "question": "Na letra dessa canção, ocorre:",
+        "options": [
+          "metáfora no trecho 'contra trator, corrente, motosserra', pois os objetos listados simbolizam a superação da floresta contra as ameaças externas.",
+          "antítese entre 'beleza' e 'valor', pois são termos de sentido oposto.",
+          "paronomásia no excerto 'tanta insânia e tanta insônia', pois se aproximam termos com sons semelhantes e sentidos diferentes.",
+          "paradoxo em 'nos últimos e trágicos decênios', pois o conceito de 'trágico' anula a ideia de novidade, expressa pelo termo 'últimos'.",
+          "personificação na passagem 'eles não pensam', pois se atribui a capacidade de pensar a seres inanimados."
+        ],
+        "answer": "paronomásia no excerto 'tanta insânia e tanta insônia', pois se aproximam termos com sons semelhantes e sentidos diferentes."
+      }
+    ]
+  }
+]
