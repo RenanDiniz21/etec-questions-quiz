@@ -1,0 +1,45 @@
+name: Build Vite App
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout do repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # Configurar Node.js
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      # Instalar PNPM
+      - name: Install pnpm
+        uses: pnpm/action-setup@v3
+        with:
+          version: 8
+
+      # Instalar dependências
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      # Rodar build do Vite
+      - name: Build project
+        run: pnpm run build
+
+      # Upload da pasta dist como artifact
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: vite-dist
+          path: dist
