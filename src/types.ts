@@ -12,5 +12,6 @@ export interface Question {
 export interface QuestionBlock {
     text: string;
     subject: string;
+    vestibular: string;
     questions: Question[];
 }

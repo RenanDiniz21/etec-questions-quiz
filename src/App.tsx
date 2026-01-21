@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 import "./App.css";
 import type { Question, QuestionBlock } from "./types";
-import questionsData from "./data/questions.json";
 
 function shuffle<T>(arr: T[]): T[] {
   const a = [...arr];
@@ -32,11 +31,80 @@ function generateExplanation(q: Question): string {
 }
 
 export default function App() {
-  // Processa os dados direto do import (síncrono)
-  const data = useMemo(() => {
-    const flat: Question[] = [];
+  const [blocks, setBlocks] = useState<QuestionBlock[]>([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+  const [vestibularFilter, setVestibularFilter] = useState("Todos");
+  const [subjectFilter, setSubjectFilter] = useState("Todas");
+  const [questionPool, setQuestionPool] = useState<Question[]>([]);
+  const [selectedQuestions, setSelectedQuestions] = useState<Question[]>([]);
 
-    for (const block of questionsData as QuestionBlock[]) {
+  const [answers, setAnswers] = useState<Record<string, number | undefined>>({});
+  const [showAnswers, setShowAnswers] = useState<Record<string, boolean>>({});
+  const [score, setScore] = useState(0);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    async function loadQuestions() {
+      try {
+        const response = await fetch(
+          `${import.meta.env.BASE_URL}questions.json`
+        );
+        if (!response.ok) {
+          throw new Error("Não foi possível carregar as questões.");
+        }
+        const payload = (await response.json()) as QuestionBlock[];
+        if (isMounted) {
+          setBlocks(payload);
+          setLoadError(null);
+        }
+      } catch (error) {
+        if (isMounted) {
+          setLoadError(
+            error instanceof Error
+              ? error.message
+              : "Erro ao carregar as questões."
+          );
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    }
+
+    loadQuestions();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const vestibulares = useMemo(() => {
+    const v = Array.from(new Set(blocks.map((block) => block.vestibular)));
+    return ["Todos", ...v];
+  }, [blocks]);
+
+  const filteredBlocks = useMemo(() => {
+    return vestibularFilter === "Todos"
+      ? blocks
+      : blocks.filter((block) => block.vestibular === vestibularFilter);
+  }, [blocks, vestibularFilter]);
+
+  const subjects = useMemo(() => {
+    const s = Array.from(new Set(filteredBlocks.map((block) => block.subject)));
+    return ["Todas", ...s];
+  }, [filteredBlocks]);
+
+  const availableQuestions = useMemo(() => {
+    const flat: Question[] = [];
+    const scopedBlocks =
+      subjectFilter === "Todas"
+        ? filteredBlocks
+        : filteredBlocks.filter((block) => block.subject === subjectFilter);
+
+    for (const block of scopedBlocks) {
       for (const q of block.questions) {
         flat.push({
           ...q,
@@ -47,36 +115,30 @@ export default function App() {
     }
 
     return flat;
-  }, []);
-
-  const [subjectFilter, setSubjectFilter] = useState("Todas");
-  const [questionPool, setQuestionPool] = useState<Question[]>([]);
-  const [selectedQuestions, setSelectedQuestions] = useState<Question[]>([]);
-
-  const [answers, setAnswers] = useState<Record<string, number | undefined>>({});
-  const [showAnswers, setShowAnswers] = useState<Record<string, boolean>>({});
-  const [score, setScore] = useState(0);
-
-  const subjects = useMemo(() => {
-    const s = Array.from(new Set(data.map((q) => q.__subject)));
-    return ["Todas", ...s];
-  }, [data]);
+  }, [filteredBlocks, subjectFilter]);
 
   useEffect(() => {
-    const pool =
-      subjectFilter === "Todas"
-        ? data
-        : data.filter((q) => q.__subject === subjectFilter);
+    if (!availableQuestions.length) {
+      setQuestionPool([]);
+      setSelectedQuestions([]);
+      return;
+    }
 
-    const pick = shuffle(pool).slice(0, 10);
+    const pick = shuffle(availableQuestions).slice(0, 10);
 
-    setQuestionPool(pool);
+    setQuestionPool(availableQuestions);
     setSelectedQuestions(pick);
 
     setAnswers({});
     setShowAnswers({});
     setScore(0);
-  }, [subjectFilter, data]);
+  }, [availableQuestions]);
+
+  useEffect(() => {
+    if (subjectFilter !== "Todas" && !subjects.includes(subjectFilter)) {
+      setSubjectFilter("Todas");
+    }
+  }, [subjectFilter, subjects]);
 
   function selectOption(qid: string, index: number) {
     if (showAnswers[qid]) return;
@@ -127,82 +189,115 @@ export default function App() {
         </div>
       </header>
 
-      <div className="controls">
-        <label>Matéria:</label>
-        <select
-          value={subjectFilter}
-          onChange={(e) => setSubjectFilter(e.target.value)}
-        >
-          {subjects.map((s) => (
-            <option key={s}>{s}</option>
-          ))}
-        </select>
+      {isLoading ? (
+        <div className="loading">Carregando questões...</div>
+      ) : loadError ? (
+        <div className="loading">{loadError}</div>
+      ) : (
+        <>
+          <div className="controls">
+            <label>Vestibular:</label>
+            <select
+              value={vestibularFilter}
+              onChange={(e) => setVestibularFilter(e.target.value)}
+            >
+              {vestibulares.map((v) => (
+                <option key={v}>{v}</option>
+              ))}
+            </select>
 
-        <button onClick={nextDraw}>Novo Sorteio</button>
-        <button onClick={revealAll}>Revelar Todas</button>
-      </div>
+            <label>Matéria:</label>
+            <select
+              value={subjectFilter}
+              onChange={(e) => setSubjectFilter(e.target.value)}
+            >
+              {subjects.map((s) => (
+                <option key={s}>{s}</option>
+              ))}
+            </select>
 
-      {selectedQuestions.map((q, i) => {
-        const selected = answers[q.id];
-        const correctIdx = q.options.indexOf(q.answer);
-
-        return (
-          <div className="question-card" key={q.id}>
-            <div className="subject">{q.__subject}</div>
-
-            {q.__sourceText && (
-              <div className="source-text">{q.__sourceText}</div>
-            )}
-
-            <div className="question">
-              {i + 1}. {q.question}
-            </div>
-
-            <div className="options">
-              {q.options.map((opt, idx) => {
-                const isSelected = selected === idx;
-                const isCorrect = correctIdx === idx;
-
-                const cls = [
-                  "option",
-                  isSelected ? "selected" : "",
-                  showAnswers[q.id] && isCorrect ? "correct" : "",
-                  showAnswers[q.id] && isSelected && !isCorrect ? "wrong" : "",
-                ].join(" ");
-
-                return (
-                  <div
-                    key={idx}
-                    className={cls}
-                    onClick={() => selectOption(q.id, idx)}
-                  >
-                    <strong>{String.fromCharCode(65 + idx)}.</strong> {opt}
-                  </div>
-                );
-              })}
-            </div>
-
-            <div className="buttons">
-              <button onClick={() => reveal(q)}>Mostrar Resposta</button>
-              <button
-                onClick={() => {
-                  setAnswers((a) => ({ ...a, [q.id]: undefined }));
-                  setShowAnswers((s) => ({ ...s, [q.id]: false }));
-                }}
-              >
-                Limpar
-              </button>
-            </div>
-
-            {showAnswers[q.id] && (
-              <div className="explanation">
-                <strong>Resposta correta:</strong> {q.answer}
-                <p>{q.explanation || generateExplanation(q)}</p>
-              </div>
-            )}
+            <button onClick={nextDraw} disabled={!questionPool.length}>
+              Novo Sorteio
+            </button>
+            <button onClick={revealAll} disabled={!selectedQuestions.length}>
+              Revelar Todas
+            </button>
           </div>
-        );
-      })}
+
+          {selectedQuestions.length === 0 ? (
+            <div className="loading">
+              Nenhuma questão encontrada para os filtros selecionados.
+            </div>
+          ) : (
+            selectedQuestions.map((q, i) => {
+              const selected = answers[q.id];
+              const correctIdx = q.options.indexOf(q.answer);
+
+              return (
+                <div className="question-card" key={q.id}>
+                  <div className="subject">
+                    {q.__subject} · {q.__sourceText ? "Texto base" : "Questão"}
+                  </div>
+
+                  {q.__sourceText && (
+                    <div className="source-text">{q.__sourceText}</div>
+                  )}
+
+                  <div className="question">
+                    {i + 1}. {q.question}
+                  </div>
+
+                  <div className="options">
+                    {q.options.map((opt, idx) => {
+                      const isSelected = selected === idx;
+                      const isCorrect = correctIdx === idx;
+
+                      const cls = [
+                        "option",
+                        isSelected ? "selected" : "",
+                        showAnswers[q.id] && isCorrect ? "correct" : "",
+                        showAnswers[q.id] && isSelected && !isCorrect
+                          ? "wrong"
+                          : "",
+                      ].join(" ");
+
+                      return (
+                        <div
+                          key={idx}
+                          className={cls}
+                          onClick={() => selectOption(q.id, idx)}
+                        >
+                          <strong>{String.fromCharCode(65 + idx)}.</strong>{" "}
+                          {opt}
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  <div className="buttons">
+                    <button onClick={() => reveal(q)}>Mostrar Resposta</button>
+                    <button
+                      onClick={() => {
+                        setAnswers((a) => ({ ...a, [q.id]: undefined }));
+                        setShowAnswers((s) => ({ ...s, [q.id]: false }));
+                      }}
+                    >
+                      Limpar
+                    </button>
+                  </div>
+
+                  {showAnswers[q.id] && (
+                    <div className="explanation">
+                      <strong>Resposta correta:</strong> {q.answer}
+                      <p>{q.explanation || generateExplanation(q)}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })
+          )}
+        </>
+      )}
     </div>
   );
 }
